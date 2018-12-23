@@ -40,7 +40,7 @@ public:
      * @param : D : El objeto donde se realiza la lectura.
      * @return : Flujo de entrada.
      */
-    friend istream& operator>> (istream & is,const Diccionario & D);
+    friend istream& operator>> (istream & is, Diccionario & D);
     /**
      * @brief : Escribe en un flujo de salida un diccionario.
      * @param : os : Flujo de salida.
@@ -50,21 +50,22 @@ public:
     friend ostream& operator<< (ostream & os, const Diccionario & D);
 
 
-    class iterator{
+    class iter{
     private:
         set<string>::iterator it;
     public:
-        iterator();
+        iter();
         string operator* ();
-        iterator & operator++ ();
-        bool operator== (const iterator &i);
-        bool operator!= (const iterator &i);
+        iter & operator++ ();
+        bool operator== (const iter &i);
+        bool operator!= (const iter &i);
         friend class Diccionario;
     };
 
-    iterator begin();
+    iter begin();
 
-    iterator end();
+    iter end();
+
 
 };
 

@@ -29,14 +29,13 @@ bool Diccionario::Esta(string palabra){
     return resultado;
 }
 
-/*istream & operator>>(istream & is, const Diccionario & D){
+istream & operator>>(istream & is, Diccionario & D){
     string aux;
-    while (is >> aux){
-        D.datos.insert(aux);
-    }
+    is >> aux;
+    D.datos.insert(aux);
 
     return is;
-}*/
+}
 
 ostream & operator<<(ostream & os, const Diccionario & D){
     for (auto it:D.datos){
@@ -45,3 +44,41 @@ ostream & operator<<(ostream & os, const Diccionario & D){
 
     return os;
 }
+
+Diccionario::iter::iter(){}
+
+string Diccionario::iter::operator*(){
+    return *it;
+}
+
+Diccionario::iter& Diccionario::iter::operator++(){
+    ++it;
+    return (*this);
+}
+
+bool Diccionario::iter::operator==(const iter & i){
+    bool resultado = false;
+    if (i.it == (*this).it)
+        resultado = true;
+    return resultado;
+}
+
+bool Diccionario::iter::operator!=(const iter &i){
+    bool resultado = true;
+    if (i.it == (*this).it)
+        resultado = false;
+    return resultado;
+}
+
+Diccionario::iter Diccionario::begin(){
+    iter mi_iterador;
+    mi_iterador.it = datos.begin();
+    return mi_iterador;
+}
+
+Diccionario::iter Diccionario::end(){
+    iter mi_iterador;
+    mi_iterador.it = datos.end();
+    return mi_iterador;
+}
+
