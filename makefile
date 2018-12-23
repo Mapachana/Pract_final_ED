@@ -42,16 +42,16 @@ mrproper : clean
 #	g++ -std=c++11 -c -o $(OBJ)/guiatlf.o -I$(INC) $(SRC)/guiatlf.cpp
 
 $(OBJ)/Diccionario.o : $(SRC)/Diccionario.cpp $(INC)/Diccionario.h
-	g++ -std=c++11 -c -p $(OBJ)/Diccionario.o -I($INC) $(SRC)/Diccionario.cpp
+	g++ -std=c++11 -c -o $(OBJ)/Diccionario.o -I$(INC) $(SRC)/Diccionario.cpp
 
 $(OBJ)/Bolsa_Letras.o : $(SRC)/Bolsa_Letras.cpp $(INC)/Bolsa_Letras.h $(OBJ)/Conjunto_Letras.o
-	g++ -std=c++11 -c -p $(OBJ)/Bolsa_Letras.o -I($INC) $(SRC)/Bolsa_Letras.cpp
+	g++ -std=c++11 -c -o $(OBJ)/Bolsa_Letras.o -I$(INC) $(SRC)/Bolsa_Letras.cpp
 
 $(OBJ)/Conjunto_Letras.o : $(SRC)/Conjunto_Letras.cpp $(INC)/Conjunto_Letras.h $(OBJ)/Letra.o
-	g++ -std=c++11 -c -p $(OBJ)/Conjunto_Letras.o -I($INC) $(SRC)/Conjunto_Letras.cpp
+	g++ -std=c++11 -c -o $(OBJ)/Conjunto_Letras.o -I$(INC) $(SRC)/Conjunto_Letras.cpp
 
 $(OBJ)/Letra.o : $(SRC)/Letra.cpp $(INC)/Letra.h
-	g++ -std=c++11 -c -p $(OBJ)/Letra.o -I($INC) $(SRC)/Letra.cpp
+	g++ -std=c++11 -c -o $(OBJ)/Letra.o -I$(INC) $(SRC)/Letra.cpp
 
 
 

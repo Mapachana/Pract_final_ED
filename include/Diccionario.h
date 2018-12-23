@@ -3,6 +3,11 @@
 
 #include <set>
 
+#include <vector>
+#include <string>
+
+using namespace std;
+
 class Diccionario{
 private:
     set<string> datos;
@@ -35,7 +40,7 @@ public:
      * @param : D : El objeto donde se realiza la lectura.
      * @return : Flujo de entrada.
      */
-    friend istream& operator>> (istream & is, Diccionario & D);
+    friend istream& operator>> (istream & is,const Diccionario & D);
     /**
      * @brief : Escribe en un flujo de salida un diccionario.
      * @param : os : Flujo de salida.
