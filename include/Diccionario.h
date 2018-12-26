@@ -2,7 +2,6 @@
 #define __Diccionario_h__
 
 #include <set>
-
 #include <vector>
 #include <string>
 

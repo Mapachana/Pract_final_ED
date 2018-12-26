@@ -1,10 +1,11 @@
 #include <Diccionario.h>
-
-using namespace std;
-
 #include <string>
 #include <set>
 #include <vector>
+#include <iostream>
+
+using namespace std;
+
 
 Diccionario::Diccionario(){}
 
@@ -31,8 +32,9 @@ bool Diccionario::Esta(string palabra){
 
 istream & operator>>(istream & is, Diccionario & D){
     string aux;
-    is >> aux;
-    D.datos.insert(aux);
+
+    while ( getline(is, aux) )
+        D.datos.insert(aux);
 
     return is;
 }
