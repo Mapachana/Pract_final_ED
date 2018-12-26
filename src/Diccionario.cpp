@@ -41,7 +41,7 @@ istream & operator>>(istream & is, Diccionario & D){
 
 ostream & operator<<(ostream & os, const Diccionario & D){
     for (auto it:D.datos){
-        os << it;
+        os << it << endl;
     }
 
     return os;

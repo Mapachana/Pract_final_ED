@@ -36,7 +36,7 @@ int main(int argc, char * argv[]){
 
     cout << "Palabras de longitud " << longitud << endl;
     for (unsigned int i = 0; i < v.size(); i++)
-        cout << v[i];
+        cout << v[i] << endl;
 
     string palabra;
 
