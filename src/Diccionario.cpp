@@ -47,6 +47,8 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
 
     output.open(frecuencias);
 
+    output << "#Letra\t F abs\t F rel" << endl;
+
     for(int i = 0; i < abc.size(); i++){
         output << char(i+97) << "\t" << abc[i] << "\t" << abc[i]/(1.0*contador) << endl;
     }
@@ -62,26 +64,13 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
             mini = abc[i];
 
     vector<int> puntuaciones = abc;
-    //sort(puntuaciones.begin(), puntuaciones.end());
 
     for (int i = 0; i < puntuaciones.size(); i++)
         puntuaciones[i] = (1.0*maxi - abc[i]) / (50*mini) + 1;
-        /*if (i < 5)
-            puntuaciones[i] = 1;
-        else if (5 <= i && i < 10)
-            puntuaciones[i] = 2;
-        else if (10 <= i && i < 15)
-            puntuaciones[i] = 5;
-        else if (15 <= i && i < 20)
-            puntuaciones[i] = 6;
-        else if (20 <= i && i < 25)
-            puntuaciones[i] = 8;
-        else
-            puntuaciones[i] = 10;*/
 
     vector<int> cantidad = abc;
 
-    int numpiezas = 74;
+    int numpiezas = 74; // 100-26 para que todas las letras aparezcan al menos una vez
     int cont = 0;
     int maximo = 0;
     for (int i = 0; i < cantidad.size(); i++){
@@ -99,6 +88,8 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
     cout << cont << endl;
 
     output.open(letras);
+
+    output << "#Letra\t Cant\t Puntuacion" << endl;
 
     for(int i = 0; i < abc.size(); i++){
         output << char(i+97) << "\t" << cantidad[i] << "\t" << puntuaciones[i] << endl;
