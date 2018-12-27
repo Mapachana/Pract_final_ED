@@ -33,6 +33,9 @@ public:
      * @return : True si la palabra esta en el diccionario y false en caso contrario.
      */
     bool Esta (string palabra);
+
+    bool GenerarFicheros(string letras, string frecuencias);
+
     /**
      * @brief : Lee de un flujo de entrada un diccionario.
      * @param : is : Flujo de entrada.

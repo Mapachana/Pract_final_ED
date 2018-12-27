@@ -47,4 +47,6 @@ int main(int argc, char * argv[]){
         cout << "La palabra esta" << endl;
     else
         cout << "La palabra no esta" << endl;
+
+    D.GenerarFicheros("letras.txt","patatas");
 }

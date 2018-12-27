@@ -22,13 +22,6 @@ public:
     setpuntos(int p);
     Letra& operator=(const Letra & l);
     friend istream & operator>>(istream & is, Letra & l);
-
-    // Va a hacer algo tipo la funcion siguiente:
-    /*
-    {
-    os << letra    cantidad     puntos
-    }*/
-
     friend ostream & operator<<(ostream & os, const Letra & l);
     friend class Conjunto_Letras;
 };

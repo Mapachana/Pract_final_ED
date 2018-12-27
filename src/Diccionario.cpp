@@ -3,6 +3,8 @@
 #include <set>
 #include <vector>
 #include <iostream>
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -28,6 +30,81 @@ bool Diccionario::Esta(string palabra){
         resultado = false;
 
     return resultado;
+}
+
+bool Diccionario::GenerarFicheros(string letras, string frecuencias){
+    ofstream output;
+
+    vector<int> abc(26,0);
+    int contador = 0;
+
+    for(auto palabra:datos){
+        for(auto letra:palabra){
+          abc[int(letra) - 97]++;
+        }
+        contador += palabra.size();
+    }
+
+    output.open(frecuencias);
+
+    for(int i = 0; i < abc.size(); i++){
+        output << char(i+97) << "\t" << abc[i] << "\t" << abc[i]/(1.0*contador) << endl;
+    }
+
+    output.close();
+
+    int maxi = 0;
+    int mini = 999999;
+    for(int i = 0; i < abc.size(); i++)
+        if (abc[i] > maxi)
+            maxi = abc[i];
+        else if (abc[i] < mini)
+            mini = abc[i];
+
+    vector<int> puntuaciones = abc;
+    //sort(puntuaciones.begin(), puntuaciones.end());
+
+    for (int i = 0; i < puntuaciones.size(); i++)
+        puntuaciones[i] = (1.0*maxi - abc[i]) / (50*mini) + 1;
+        /*if (i < 5)
+            puntuaciones[i] = 1;
+        else if (5 <= i && i < 10)
+            puntuaciones[i] = 2;
+        else if (10 <= i && i < 15)
+            puntuaciones[i] = 5;
+        else if (15 <= i && i < 20)
+            puntuaciones[i] = 6;
+        else if (20 <= i && i < 25)
+            puntuaciones[i] = 8;
+        else
+            puntuaciones[i] = 10;*/
+
+    vector<int> cantidad = abc;
+
+    int numpiezas = 74;
+    int cont = 0;
+    int maximo = 0;
+    for (int i = 0; i < cantidad.size(); i++){
+        cantidad[i] = floor(cantidad[i]/(1.0*contador)*numpiezas + 0.5)+1;
+        cont += cantidad[i];
+        if (cantidad[i] > maximo)
+            maximo = i;
+    }
+
+    if (cont < 100){
+        cantidad[maximo]++;
+        cont++;
+    }
+    // QUITAR ESTO DEL CONT ANTES D ENTREGAAAAAAAAAAAAR
+    cout << cont << endl;
+
+    output.open(letras);
+
+    for(int i = 0; i < abc.size(); i++){
+        output << char(i+97) << "\t" << cantidad[i] << "\t" << puntuaciones[i] << endl;
+    }
+
+    output.close();
 }
 
 istream & operator>>(istream & is, Diccionario & D){
