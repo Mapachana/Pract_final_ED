@@ -64,10 +64,10 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
     for(int i = 0; i < abc.size(); i++)
         if (abc[i] > maxi)
             maxi = abc[i];
-        else if (abc[i] < mini)
+        else if (abc[i] < mini && abc[i] > 0)
             mini = abc[i];
 
-    mini = max(mini, 1);
+    //mini = max(mini, 1);
 
     vector<int> puntuaciones(26);
 
@@ -82,24 +82,30 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
         /*cout << char(i+97) << " " << -log(abc[i]/(1.0*contador)) << endl;
         puntuaciones[i] =  (1.0*maxi - abc[i]) / (50*mini) + 1;*/
         if (abc[i] == 0)
-            puntuaciones[i] = 12;
+            puntuaciones[i] = 0;
         else
             puntuaciones[i] = -log(abc[i]/(1.0*contador)) +0.5;
     }
 
-    vector<int> cantidad = abc;
+    vector<int> cantidad(26);
 
     int numpiezas = 74; // 100-26 para que todas las letras aparezcan al menos una vez
     int cont = 0;
     int maximo = 0;
     for (int i = 0; i < cantidad.size(); i++){
-        cantidad[i] = floor(cantidad[i]/(1.0*contador)*numpiezas + 0.5)+1;
+        if (abc[i] == 0)
+            cantidad[i] = 0;
+        else
+            cantidad[i] = floor(abc[i]/(1.0*contador)*numpiezas + 0.5)+1;
         cont += cantidad[i];
         if (cantidad[i] > maximo)
             maximo = i;
     }
 
-    if (cont < 100){
+    // #revisar
+    //Quiero que haya el numero de piezas que quiero si o si y como mucho se añaden 2 o 3 piezas  que no cambia mucho la estadistica
+    while (cont < 100){
+        //cout << "hola" << endl;
         cantidad[maximo]++;
         cont++;
     }
