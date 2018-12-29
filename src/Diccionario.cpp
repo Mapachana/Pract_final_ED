@@ -40,7 +40,7 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
 
     for(auto palabra:datos){
         for(auto letra:palabra){
-          abc[int(letra) - 97]++;
+            abc[int(letra) - 97]++;
         }
         contador += palabra.size();
     }
@@ -67,10 +67,25 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
         else if (abc[i] < mini)
             mini = abc[i];
 
-    vector<int> puntuaciones = abc;
+    mini = max(mini, 1);
 
+    vector<int> puntuaciones(26);
+
+    // #revisar #error YA ESTA CORREGIDO ESTO FUNCIONA BIEN PWERO LO DEJO PARA VER QUE TENGO QUE LIMPIAR EL DESASTRE DE CODIGO Y COMENTARIOS
+    // ---------------------------------------------------------------------------------------------------------------
+    //------------ ATENCION TENGO QUE CAMBIAR LO DE LOS PUNTOS QUE ASI ME DA UNDERFLOW EN CIERTOS DICCIONARIOS -------
+    // ---------------------------------------------------------------------------------------------------------------
+    // Esta aproximacion se hace asi porque como la frecuencia de letras es una exponencial negativa para hacerlo lineal se usa log
     for (int i = 0; i < puntuaciones.size(); i++)
-        puntuaciones[i] = (1.0*maxi - abc[i]) / (50*mini) + 1;
+    {
+        //cout << maxi << " " << mini << " " << abc[i] << " LOL" << endl;
+        /*cout << char(i+97) << " " << -log(abc[i]/(1.0*contador)) << endl;
+        puntuaciones[i] =  (1.0*maxi - abc[i]) / (50*mini) + 1;*/
+        if (abc[i] == 0)
+            puntuaciones[i] = 12;
+        else
+            puntuaciones[i] = -log(abc[i]/(1.0*contador)) +0.5;
+    }
 
     vector<int> cantidad = abc;
 
@@ -88,6 +103,7 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
         cantidad[maximo]++;
         cont++;
     }
+    // #revisar
     // QUITAR ESTO DEL CONT ANTES D ENTREGAAAAAAAAAAAAR
     cout << cont << endl;
 
