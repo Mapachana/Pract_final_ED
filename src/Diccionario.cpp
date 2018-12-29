@@ -46,6 +46,10 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
     }
 
     output.open(frecuencias);
+    if (!output){
+        cout << "Error abriendo el archivo frecuencias" << endl;
+        return 0;
+    }
 
     output << "#Letra\t F abs\t F rel" << endl;
 
@@ -88,6 +92,11 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
     cout << cont << endl;
 
     output.open(letras);
+
+    if (!output){
+        cout << "Error abriendo el archivo letras" << endl;
+        return 0;
+    }
 
     output << "#Letra\t Cant\t Puntuacion" << endl;
 

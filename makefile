@@ -6,7 +6,7 @@ BIN	= ./bin
 
 
 #all : $(BIN)/diccionario $(BIN)/guiatlf
-all : $(OBJ)/Diccionario.o $(OBJ)/Letra.o $(OBJ)/Conjunto_Letras.o $(OBJ)/Bolsa_Letras.o $(BIN)/testdiccionario
+all : $(OBJ)/Diccionario.o $(OBJ)/Letra.o $(OBJ)/Conjunto_Letras.o $(OBJ)/Bolsa_Letras.o $(BIN)/testdiccionario $(BIN)/cantidad_letras
 
 # diccionario : $(BIN)/diccionario
 
@@ -43,6 +43,9 @@ mrproper : clean
 
 $(BIN)/testdiccionario : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(SRC)/testdiccionario.cpp
 	g++ -std=c++11 -o $(BIN)/testdiccionario -I$(INC) $(SRC)/testdiccionario.cpp  $(OBJ)/Diccionario.o
+
+$(BIN)/cantidad_letras : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(SRC)/cantidad_letras.cpp
+	g++ -std=c++11 -o $(BIN)/cantidad_letras -I$(INC) $(SRC)/cantidad_letras.cpp $(OBJ)/Diccionario.o
 
 $(OBJ)/Diccionario.o : $(SRC)/Diccionario.cpp $(INC)/Diccionario.h
 	g++ -std=c++11 -c -o $(OBJ)/Diccionario.o -I$(INC) $(SRC)/Diccionario.cpp
