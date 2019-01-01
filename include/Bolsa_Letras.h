@@ -6,6 +6,8 @@
 #include <vector>
 #include <Letra.h>
 #include <Conjunto_Letras.h>
+#include <string>
+#include <Diccionario.h>
 
 class Bolsa_Letras{
 private:
@@ -32,7 +34,15 @@ public:
      */
     Bolsa_Letras& operator= (const Bolsa_Letras & b);
 
+    void aniadirficha(Letra l);
+
     Bolsa_Letras GenerarLetrasJugador(int num);
+
+    bool PuedoFormar(string palabra);
+
+    vector<string> PalabraMasLarga (const Diccionario & D);
+
+    vector<string> PalabraMasPuntos (const Diccionario &D);
 
     /**
      * @brief : Lee de un flujo de entrada una Bolsa_Letras.

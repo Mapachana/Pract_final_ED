@@ -51,6 +51,13 @@ bool Letra::operator==(const Letra& l){
         return false;
 }
 
+bool Letra::operator!=(const Letra& l){
+    if (letra != l.letra)
+        return true;
+    else
+        return false;
+}
+
 Letra& Letra::operator=(const Letra & l){
     letra = l.letra;
     cantidad = l.cantidad;

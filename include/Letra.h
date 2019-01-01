@@ -58,6 +58,12 @@ public:
      */
     bool operator==(const Letra& l);
     /**
+     * @brief : Comprueba si dos Letras son distintas, esto es, representan distintas letras.
+     * @param : l : Letra que se quiere comparar.
+     * @return : Devuelve true son distintas y false si no.
+     */
+    bool operator!=(const Letra& l);
+    /**
      * @brief : Operador de asignacion.
      * @param :  l : Letra que se quiere asignar.
      * @return : Devuelve una referencia al objeto.

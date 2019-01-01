@@ -6,7 +6,7 @@ BIN	= ./bin
 
 
 #all : $(BIN)/diccionario $(BIN)/guiatlf
-all : $(OBJ)/Diccionario.o $(OBJ)/Letra.o $(OBJ)/Conjunto_Letras.o $(OBJ)/Bolsa_Letras.o $(BIN)/testdiccionario $(BIN)/cantidad_letras
+all : $(OBJ)/Diccionario.o $(OBJ)/Letra.o $(OBJ)/Conjunto_Letras.o $(OBJ)/Bolsa_Letras.o $(BIN)/testdiccionario $(BIN)/cantidad_letras $(BIN)/letras
 
 # diccionario : $(BIN)/diccionario
 
@@ -47,10 +47,13 @@ $(BIN)/testdiccionario : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(SRC)/testdi
 $(BIN)/cantidad_letras : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(SRC)/cantidad_letras.cpp
 	g++ -std=c++11 -g -o $(BIN)/cantidad_letras -I$(INC) $(SRC)/cantidad_letras.cpp $(OBJ)/Diccionario.o
 
+$(BIN)/letras : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(OBJ)/Bolsa_Letras.o $(INC)/Bolsa_Letras.h $(OBJ)/Letra.o $(INC)/Letra.h $(SRC)/letras.cpp
+	g++ -std=c++11 -g -o $(BIN)/letras -I$(INC) $(SRC)/letras.cpp $(OBJ)/Diccionario.o $(OBJ)/Bolsa_Letras.o $(OBJ)/Letra.o
+
 $(OBJ)/Diccionario.o : $(SRC)/Diccionario.cpp $(INC)/Diccionario.h
 	g++ -std=c++11 -g -c -o $(OBJ)/Diccionario.o -I$(INC) $(SRC)/Diccionario.cpp
 
-$(OBJ)/Bolsa_Letras.o : $(SRC)/Bolsa_Letras.cpp $(INC)/Bolsa_Letras.h $(OBJ)/Conjunto_Letras.o
+$(OBJ)/Bolsa_Letras.o : $(SRC)/Bolsa_Letras.cpp $(INC)/Bolsa_Letras.h $(OBJ)/Conjunto_Letras.o $(OBJ)/Letra.o
 	g++ -std=c++11 -c -o $(OBJ)/Bolsa_Letras.o -I$(INC) $(SRC)/Bolsa_Letras.cpp
 
 $(OBJ)/Conjunto_Letras.o : $(SRC)/Conjunto_Letras.cpp $(INC)/Conjunto_Letras.h $(INC)/Letra.h

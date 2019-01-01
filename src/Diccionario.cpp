@@ -111,7 +111,7 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
     }
     // #revisar
     // QUITAR ESTO DEL CONT ANTES D ENTREGAAAAAAAAAAAAR
-    cout << cont << endl;
+    //cout << cont << endl;
 
     output.open(letras);
 
@@ -152,7 +152,7 @@ string Diccionario::iter::operator*(){
     return *it;
 }
 
-Diccionario::iter& Diccionario::iter::operator++(){
+Diccionario::iter& Diccionario::iter::operator++() {
     ++it;
     return (*this);
 }
@@ -171,13 +171,13 @@ bool Diccionario::iter::operator!=(const iter &i){
     return resultado;
 }
 
-Diccionario::iter Diccionario::begin(){
+Diccionario::iter Diccionario::begin() const {
     iter mi_iterador;
     mi_iterador.it = datos.begin();
     return mi_iterador;
 }
 
-Diccionario::iter Diccionario::end(){
+Diccionario::iter Diccionario::end() const {
     iter mi_iterador;
     mi_iterador.it = datos.end();
     return mi_iterador;

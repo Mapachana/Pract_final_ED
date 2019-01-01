@@ -64,9 +64,9 @@ public:
         friend class Diccionario;
     };
 
-    iter begin();
+    iter begin() const;
 
-    iter end();
+    iter end() const;
 
 
 };
