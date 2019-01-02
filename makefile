@@ -9,9 +9,7 @@ all : $(BIN)/testdiccionario $(BIN)/cantidad_letras $(BIN)/letras
 
 # ************ Generación de documentación ******************
 documentacion:
-	# doxygen doc/doxys/Doxyfile
 	doxygen doc/letras.doxy
-	# firefox doc/html/index.html
 
 # ************ Limpieza ************
 clean :
@@ -19,7 +17,7 @@ clean :
 	rm -f $(OBJ)/*.o
 
 mrproper : clean
-	rm -f $(BIN)/* doc/html/*
+	rm -f -r $(BIN)/* ./doc/html/* ./doc/latex/*
 
 # ************** Compilacion de modulos ********
 
@@ -35,7 +33,7 @@ $(BIN)/letras : $(OBJ)/Diccionario.o $(INC)/Diccionario.h $(OBJ)/Bolsa_Letras.o 
 $(OBJ)/Diccionario.o : $(SRC)/Diccionario.cpp $(INC)/Diccionario.h
 	g++ -std=c++11 -g -c -o $(OBJ)/Diccionario.o -I$(INC) $(SRC)/Diccionario.cpp
 
-$(OBJ)/Bolsa_Letras.o : $(SRC)/Bolsa_Letras.cpp $(INC)/Bolsa_Letras.h $(OBJ)/Letra.o
+$(OBJ)/Bolsa_Letras.o : $(SRC)/Bolsa_Letras.cpp $(INC)/Bolsa_Letras.h $(OBJ)/Letra.o $(OBJ)/Diccionario.o
 	g++ -std=c++11 -c -o $(OBJ)/Bolsa_Letras.o -I$(INC) $(SRC)/Bolsa_Letras.cpp
 
 $(OBJ)/Letra.o : $(SRC)/Letra.cpp $(INC)/Letra.h

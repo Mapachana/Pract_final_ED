@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iter',['iter',['../classDiccionario_1_1iter.html',1,'Diccionario']]]
+  ['iterator',['iterator',['../classDiccionario_1_1iterator.html',1,'Diccionario']]]
 ];

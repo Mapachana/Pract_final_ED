@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['esta',['Esta',['../classDiccionario.html#a2091d415bc53c34a0e78e7bd9b073024',1,'Diccionario']]]
+  ['diccionario',['Diccionario',['../classDiccionario.html#aa0a2191ec706b256c35b5229cc197b15',1,'Diccionario']]]
 ];

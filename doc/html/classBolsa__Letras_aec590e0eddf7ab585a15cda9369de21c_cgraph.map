@@ -1,4 +1,0 @@
-<map id="Bolsa_Letras::aniadir" name="Bolsa_Letras::aniadir">
-<area shape="rect" id="node2" href="$classLetra.html#a89680a16e9ab48e9ed0d6dee52cae82e" title=": Asigna la cantidad de veces que aparece esta letra en la bolsa. " alt="" coords="197,5,324,32"/>
-<area shape="rect" id="node3" href="$classLetra.html#a60bee0a9f4fd060146a9bc6711d728c4" title=": Asigna un valor de letra a Letra si es posible. " alt="" coords="209,56,312,83"/>
-</map>

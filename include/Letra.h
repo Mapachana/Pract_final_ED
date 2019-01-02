@@ -1,10 +1,8 @@
 #ifndef __Letra_h__
 #define __Letra_h__
 
-// #revisar los includes si desscomento lo que hay no funciona y ya no recuerdo para que queria hacerlo friend
-
 #include <iostream>
-//#include <Conjunto_Letras.h>
+
 
 using namespace std;
 
@@ -83,7 +81,6 @@ public:
      * @return : Flujo de salida.
      */
     friend ostream & operator<<(ostream & os, const Letra & l);
-    //friend class Conjunto_Letras;
 };
 
 #endif // __Letra_h__

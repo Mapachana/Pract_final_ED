@@ -30,4 +30,6 @@ int main(int argc, char * argv[]){
     cout << "Generando ficheros" << endl;
 
     D.GenerarFicheros(argv[2],argv[3]);
+
+    return 0;
 }

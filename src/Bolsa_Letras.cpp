@@ -2,7 +2,6 @@
 #include <vector>
 #include <Letra.h>
 #include <Diccionario.h>
-// #include <Conjunto_Letras.h>
 #include <string>
 #include <Bolsa_Letras.h>
 #include <random>
@@ -11,10 +10,6 @@
 using namespace std;
 
 Bolsa_Letras::Bolsa_Letras(){}
-
-/*Bolsa_Letras::Bolsa_Letras(const Conjunto_Letras & c){
-    for (int i = 0, i < c.)
-}*/
 
 Bolsa_Letras& Bolsa_Letras::operator=(const Bolsa_Letras & b){
     bolsa = b.bolsa;
@@ -47,6 +42,7 @@ void Bolsa_Letras::aniadirficha(Letra l){
 
 Bolsa_Letras Bolsa_Letras::GenerarLetrasJugador(int num){
     Bolsa_Letras jugador;
+    int numfichas = 100;
 
     int contador = 0;
     bool terminado = false;
@@ -54,8 +50,8 @@ Bolsa_Letras Bolsa_Letras::GenerarLetrasJugador(int num){
     for (int j = 0; j < num; j++){
         contador = 0;
         terminado = false;
-        int randnum = rand() % (100-j) + 1;
-        //cout << randnum << endl;
+        int randnum = rand() % (numfichas-j) + 1;
+
         for (int i = 0; i < bolsa.size() && !terminado; i++){
             contador += bolsa[i].getcantidad();
             if (randnum <= contador){
@@ -79,29 +75,15 @@ bool Bolsa_Letras::PuedoFormar(string palabra){
             letras.push_back(bolsa[i].getletra());
 
     for (int i = 0; i < palabra.length() && resultado; i++) {
-
         pos = distance(letras.begin(), find(letras.begin(), letras.end(), palabra[i]) );
 
-        if (pos != letras.size()){
-            //cout << letras[i] << endl;
+        if (pos != letras.size())
             letras.erase(letras.begin() + pos);
-        }
-            //letras[i] = '2';
-        else{
+        else
             resultado = false;
-            //cout << "ENTRO AQUI CON LA PALABRA " << palabra << endl;
-        }
-
     }
 
-
-
-    /*for (int i = 0; i < palabra.length(); i++)
-        if (bolsa.find(palabra[i]) !0 bolsa.end())
-            bolsa.erase(palabra[i]);*/
-
     return resultado;
-
 }
 
 vector<string> Bolsa_Letras::PalabraMasLarga (const Diccionario & D){
@@ -146,7 +128,6 @@ vector<string> Bolsa_Letras::PalabraMasPuntos (const Diccionario &D){
             else if (cont == maxpuntos)
                 resultado.push_back(palabra);
         }
-
     }
 
     return resultado;
@@ -178,13 +159,7 @@ istream & operator>> (istream & is, Bolsa_Letras & b){
     return is;
 }
 ostream & operator<< (ostream & os, const Bolsa_Letras & b){
-    /*os << "#Letra\t Cant\t Puntuacion" << endl;
-    for (int i = 0; i < b.bolsa.size(); i++)
-        os << b.bolsa[i] << endl;
-
-    return os;*/
-
-    os << "Las letras son ";
+    os << "Las letras son:   ";
     for (int i = 0; i < b.bolsa.size(); i++)
         for (int j = 0; j < b.bolsa[i].getcantidad(); j++)
             os << b.bolsa[i].getletra() << " ";

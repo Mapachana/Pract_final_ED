@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['diccionario',['Diccionario',['../classDiccionario.html#aa0a2191ec706b256c35b5229cc197b15',1,'Diccionario']]]
+  ['calcularpuntos',['CalcularPuntos',['../classBolsa__Letras.html#a1c3834faeccf9a8906d5b3b120f93106',1,'Bolsa_Letras']]]
 ];

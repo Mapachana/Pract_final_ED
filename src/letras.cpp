@@ -5,7 +5,6 @@
 #include <string>
 #include <Diccionario.h>
 #include <Letra.h>
-// #include <Conjunto_Letras.h>
 #include <Bolsa_Letras.h>
 #include <random>
 
@@ -93,9 +92,4 @@ int main(int argc, char * argv[]){
 
     cout << "Ha terminado el juego" << endl;
     return 0;
-
-
-
-
-
 }

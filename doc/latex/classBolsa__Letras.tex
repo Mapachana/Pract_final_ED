@@ -7,27 +7,21 @@
 
 \begin{DoxyCompactList}\small\item\em \+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} vacía \end{DoxyCompactList}\item 
 void \hyperlink{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{aniadir} (const \hyperlink{classLetra}{Letra} \&l)
-\begin{DoxyCompactList}\small\item\em \+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} a partir de un Conjunto\+\_\+\+Letras \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em \+: Añade una \hyperlink{classLetra}{Letra} al Conjunto\+\_\+\+Letras. \end{DoxyCompactList}\item 
 \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \& \hyperlink{classBolsa__Letras_a2c283861ab50b212023715c3959ec053}{operator=} (const \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \&b)
 \begin{DoxyCompactList}\small\item\em \+: Operador de asignacion. \end{DoxyCompactList}\item 
-void {\bfseries aniadirficha} (\hyperlink{classLetra}{Letra} l)\hypertarget{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}{}\label{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}
-
-\item 
-\hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} {\bfseries Generar\+Letras\+Jugador} (int num)\hypertarget{classBolsa__Letras_a9f1e76257206146e695227576abed336}{}\label{classBolsa__Letras_a9f1e76257206146e695227576abed336}
-
-\item 
-bool {\bfseries Puedo\+Formar} (string palabra)\hypertarget{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{}\label{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}
-
-\item 
-vector$<$ string $>$ {\bfseries Palabra\+Mas\+Larga} (const \hyperlink{classDiccionario}{Diccionario} \&D)\hypertarget{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}{}\label{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}
-
-\item 
-vector$<$ string $>$ {\bfseries Palabra\+Mas\+Puntos} (const \hyperlink{classDiccionario}{Diccionario} \&D)\hypertarget{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}{}\label{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}
-
-\item 
-int {\bfseries Calcular\+Puntos} (string palabra)\hypertarget{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}{}\label{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}
-
-\end{DoxyCompactItemize}
+void \hyperlink{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}{aniadirficha} (\hyperlink{classLetra}{Letra} l)
+\begin{DoxyCompactList}\small\item\em \+: Añade una ficha a la bolsa (Aumenta la cantidad de esa letra en una unidad). \end{DoxyCompactList}\item 
+\hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \hyperlink{classBolsa__Letras_a9f1e76257206146e695227576abed336}{Generar\+Letras\+Jugador} (int num)
+\begin{DoxyCompactList}\small\item\em \+: Genera una bolsa de letras aleatoria. \end{DoxyCompactList}\item 
+bool \hyperlink{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{Puedo\+Formar} (string palabra)
+\begin{DoxyCompactList}\small\item\em \+: Comprueba si se puede formar una palabra con el conjunto de letras actual. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}{Palabra\+Mas\+Larga} (const \hyperlink{classDiccionario}{Diccionario} \&D)
+\begin{DoxyCompactList}\small\item\em \+: Busca la palabra mas larga que se puede formar con la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} dado un diccionario. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}{Palabra\+Mas\+Puntos} (const \hyperlink{classDiccionario}{Diccionario} \&D)
+\begin{DoxyCompactList}\small\item\em \+: Busca la palabra con mas puntos que se puede formar con la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} dado un diccionario. \end{DoxyCompactList}\item 
+int \hyperlink{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}{Calcular\+Puntos} (string palabra)
+\begin{DoxyCompactList}\small\item\em \+: Calcula los puntos de la palabra de acuerdo a la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} actual. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -40,7 +34,7 @@ ostream \& \hyperlink{classBolsa__Letras_a4467ebafe1a0f889e3fda938465ed12c}{oper
 \subsection{Descripción detallada}
 
 
-Definición en la línea 12 del archivo Bolsa\+\_\+\+Letras.\+h.
+Definición en la línea 11 del archivo Bolsa\+\_\+\+Letras.\+h.
 
 
 
@@ -54,37 +48,187 @@ Definición en la línea 12 del archivo Bolsa\+\_\+\+Letras.\+h.
 )}\hypertarget{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{}\label{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}
 
 
-\+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} a partir de un Conjunto\+\_\+\+Letras 
+\+: Añade una \hyperlink{classLetra}{Letra} al Conjunto\+\_\+\+Letras. 
 
 
 \begin{DoxyParams}{Parámetros}
-{\em } & c \+: Conjunto\+\_\+\+Letras a partir del que se obtienen las cantidades y letras \+: Añade una \hyperlink{classLetra}{Letra} al Conjunto\+\_\+\+Letras. \\
-\hline
 {\em } & l \+: \hyperlink{classLetra}{Letra} que se quiere añadir. \\
 \hline
 \end{DoxyParams}
 
 
-Definición en la línea 23 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+Definición en la línea 18 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 
 
 \begin{DoxyCode}
-23                                          \{
-24     \textcolor{keywordtype}{bool} existe = \textcolor{keyword}{false};
-25     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size(); i++)
-26         \textcolor{keywordflow}{if} (bolsa[i] == l)
-27             existe = \textcolor{keyword}{true};
-28     \textcolor{keywordflow}{if} (!existe)
-29         bolsa.push\_back(l);
-30 \}
+18                                          \{
+19     \textcolor{keywordtype}{bool} existe = \textcolor{keyword}{false};
+20     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size(); i++)
+21         \textcolor{keywordflow}{if} (bolsa[i] == l)
+22             existe = \textcolor{keyword}{true};
+23     \textcolor{keywordflow}{if} (!existe)
+24         bolsa.push\_back(l);
+25 \}
+\end{DoxyCode}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!aniadirficha@{aniadirficha}}
+\index{aniadirficha@{aniadirficha}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{aniadirficha(\+Letra l)}{aniadirficha(Letra l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bolsa\+\_\+\+Letras\+::aniadirficha (
+\begin{DoxyParamCaption}
+\item[{{\bf Letra}}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}{}\label{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}
+
+
+\+: Añade una ficha a la bolsa (Aumenta la cantidad de esa letra en una unidad). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & l \+: \hyperlink{classLetra}{Letra} que se añade. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 27 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+27                                       \{
+28     \textcolor{keywordtype}{bool} existe = \textcolor{keyword}{false};
+29     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size(); i++)
+30         \textcolor{keywordflow}{if} (bolsa[i] == l)
+31             existe = \textcolor{keyword}{true};
+32         \textcolor{keywordflow}{if} (!existe)\{
+33             l.\hyperlink{classLetra_a89680a16e9ab48e9ed0d6dee52cae82e}{setcantidad}(1);
+34             bolsa.push\_back(l);
+35         \}
+36         \textcolor{keywordflow}{else}\{
+37 
+38             \textcolor{keywordtype}{int} pos = distance(bolsa.begin(), find(bolsa.begin(), bolsa.end(), l));
+39             bolsa[pos].setcantidad(bolsa[pos].getcantidad()+1);
+40         \}
+41 \}
 \end{DoxyCode}
 
 
-Gráfico de llamadas para esta función\+:\nopagebreak
+Gráfico de llamadas para esta función\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=319pt]{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c_cgraph}
+\includegraphics[width=340pt]{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!Calcular\+Puntos@{Calcular\+Puntos}}
+\index{Calcular\+Puntos@{Calcular\+Puntos}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{Calcular\+Puntos(string palabra)}{CalcularPuntos(string palabra)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bolsa\+\_\+\+Letras\+::\+Calcular\+Puntos (
+\begin{DoxyParamCaption}
+\item[{string}]{palabra}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}{}\label{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}
+
+
+\+: Calcula los puntos de la palabra de acuerdo a la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} actual. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & palabra \+: Palabra a la que se quieren calcular los puntos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Devuelve el numero de puntos de esa palabra. 
+\end{DoxyReturn}
+
+
+Definición en la línea 136 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+136                                                \{
+137     \textcolor{keywordtype}{int} puntos = 0;
+138     \hyperlink{classLetra}{Letra} aux;
+139     \textcolor{keywordtype}{int} pos;
+140 
+141     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < palabra.length(); i++)\{
+142         aux.\hyperlink{classLetra_a60bee0a9f4fd060146a9bc6711d728c4}{setletra}(palabra[i]);
+143         pos = distance(bolsa.begin(), find(bolsa.begin(), bolsa.end(), aux));
+144         puntos += bolsa[pos].getpuntos();
+145     \}
+146 
+147     \textcolor{keywordflow}{return} puntos;
+148 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!Generar\+Letras\+Jugador@{Generar\+Letras\+Jugador}}
+\index{Generar\+Letras\+Jugador@{Generar\+Letras\+Jugador}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{Generar\+Letras\+Jugador(int num)}{GenerarLetrasJugador(int num)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bolsa\+\_\+\+Letras} Bolsa\+\_\+\+Letras\+::\+Generar\+Letras\+Jugador (
+\begin{DoxyParamCaption}
+\item[{int}]{num}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_a9f1e76257206146e695227576abed336}{}\label{classBolsa__Letras_a9f1e76257206146e695227576abed336}
+
+
+\+: Genera una bolsa de letras aleatoria. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & num \+: Numero de letras que tendrá la bolsa. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} aleatoria. 
+\end{DoxyReturn}
+
+
+Definición en la línea 43 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+43                                                       \{
+44     \hyperlink{classBolsa__Letras}{Bolsa\_Letras} jugador;
+45     \textcolor{keywordtype}{int} numfichas = 100;
+46 
+47     \textcolor{keywordtype}{int} contador = 0;
+48     \textcolor{keywordtype}{bool} terminado = \textcolor{keyword}{false};
+49 
+50     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < num; j++)\{
+51         contador = 0;
+52         terminado = \textcolor{keyword}{false};
+53         \textcolor{keywordtype}{int} randnum = rand() % (numfichas-j) + 1;
+54 
+55         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size() && !terminado; i++)\{
+56             contador += bolsa[i].getcantidad();
+57             \textcolor{keywordflow}{if} (randnum <= contador)\{
+58                 jugador.\hyperlink{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}{aniadirficha}(bolsa[i]);
+59                 bolsa[i].setcantidad(bolsa[i].getcantidad()-1);
+60                 terminado = \textcolor{keyword}{true};
+61             \}
+62         \}
+63     \}
+64 
+65     \textcolor{keywordflow}{return} jugador;
+66 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBolsa__Letras_a9f1e76257206146e695227576abed336_cgraph}
 \end{center}
 \end{figure}
 
@@ -110,13 +254,168 @@ Gráfico de llamadas para esta función\+:\nopagebreak
 \end{DoxyReturn}
 
 
-Definición en la línea 19 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+Definición en la línea 14 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 
 
 \begin{DoxyCode}
-19                                                            \{
-20     bolsa = b.bolsa;
-21 \}
+14                                                            \{
+15     bolsa = b.bolsa;
+16 \}
+\end{DoxyCode}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!Palabra\+Mas\+Larga@{Palabra\+Mas\+Larga}}
+\index{Palabra\+Mas\+Larga@{Palabra\+Mas\+Larga}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{Palabra\+Mas\+Larga(const Diccionario \&\+D)}{PalabraMasLarga(const Diccionario &D)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Bolsa\+\_\+\+Letras\+::\+Palabra\+Mas\+Larga (
+\begin{DoxyParamCaption}
+\item[{const {\bf Diccionario} \&}]{D}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}{}\label{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}
+
+
+\+: Busca la palabra mas larga que se puede formar con la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} dado un diccionario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & D \+: \hyperlink{classDiccionario}{Diccionario} que recoge qué palabras son validas para formar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Devuelve un vector con las palabras mas largas que se pueden formar. 
+\end{DoxyReturn}
+
+
+Definición en la línea 89 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+89                                                                   \{
+90     vector<string> resultado;
+91     \textcolor{keywordtype}{int} maxlong = 0;
+92 
+93     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} palabra:D)\{
+94             \textcolor{keywordflow}{if} (palabra.size() <= bolsa.size() && \hyperlink{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{PuedoFormar}(palabra))
+95                 \textcolor{keywordflow}{if} (palabra.size() > maxlong)\{
+96                     maxlong = palabra.size();
+97                     resultado.clear();
+98                     resultado.push\_back(palabra);
+99                 \}
+100                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (palabra.size() == maxlong)
+101                     resultado.push\_back(palabra);
+102     \}
+103 
+104     \textcolor{keywordflow}{return} resultado;
+105 
+106 \}
+\end{DoxyCode}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!Palabra\+Mas\+Puntos@{Palabra\+Mas\+Puntos}}
+\index{Palabra\+Mas\+Puntos@{Palabra\+Mas\+Puntos}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{Palabra\+Mas\+Puntos(const Diccionario \&\+D)}{PalabraMasPuntos(const Diccionario &D)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Bolsa\+\_\+\+Letras\+::\+Palabra\+Mas\+Puntos (
+\begin{DoxyParamCaption}
+\item[{const {\bf Diccionario} \&}]{D}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}{}\label{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}
+
+
+\+: Busca la palabra con mas puntos que se puede formar con la \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} dado un diccionario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & D \+: \hyperlink{classDiccionario}{Diccionario} que recoge qué palabras son validas para formar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Devuelve un vector con las palabras con mas puntos que se pueden formar. 
+\end{DoxyReturn}
+
+
+Definición en la línea 108 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+108                                                                   \{
+109     vector<string> resultado;
+110     \textcolor{keywordtype}{int} maxpuntos = 0;
+111     \textcolor{keywordtype}{int} maxlong = bolsa.size();
+112     \textcolor{keywordtype}{int} cont = 0;
+113     \hyperlink{classLetra}{Letra} aux;
+114 
+115     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} palabra:D)\{
+116         \textcolor{keywordflow}{if} (palabra.size() <= maxlong && \hyperlink{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{PuedoFormar}(palabra))\{
+117             cont = 0;
+118             \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} letra:palabra)\{
+119                 aux.\hyperlink{classLetra_a60bee0a9f4fd060146a9bc6711d728c4}{setletra}(letra);
+120                 \textcolor{keywordtype}{int} pos = distance(bolsa.begin(), find(bolsa.begin(), bolsa.end(), aux));
+121                 cont += bolsa[pos].getpuntos();
+122             \}
+123             \textcolor{keywordflow}{if} (cont > maxpuntos)\{
+124                 maxpuntos = cont;
+125                 resultado.clear();
+126                 resultado.push\_back(palabra);
+127             \}
+128             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cont == maxpuntos)
+129                 resultado.push\_back(palabra);
+130         \}
+131     \}
+132 
+133     \textcolor{keywordflow}{return} resultado;
+134 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!Puedo\+Formar@{Puedo\+Formar}}
+\index{Puedo\+Formar@{Puedo\+Formar}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{Puedo\+Formar(string palabra)}{PuedoFormar(string palabra)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bolsa\+\_\+\+Letras\+::\+Puedo\+Formar (
+\begin{DoxyParamCaption}
+\item[{string}]{palabra}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{}\label{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}
+
+
+\+: Comprueba si se puede formar una palabra con el conjunto de letras actual. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & palabra \+: Palabra que se quiere comprobar si puede ser formada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Devuelve true si puede formarse y false de lo contrario. 
+\end{DoxyReturn}
+
+
+Definición en la línea 68 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+68                                             \{
+69     vector<char> letras;
+70     \textcolor{keywordtype}{bool} resultado = \textcolor{keyword}{true};
+71     \textcolor{keywordtype}{int} pos;
+72 
+73     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size(); i++)
+74         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < bolsa[i].getcantidad(); j++)
+75             letras.push\_back(bolsa[i].getletra());
+76 
+77     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < palabra.length() && resultado; i++) \{
+78         pos = distance(letras.begin(), find(letras.begin(), letras.end(), palabra[i]) );
+79 
+80         \textcolor{keywordflow}{if} (pos != letras.size())
+81             letras.erase(letras.begin() + pos);
+82         \textcolor{keywordflow}{else}
+83             resultado = \textcolor{keyword}{false};
+84     \}
+85 
+86     \textcolor{keywordflow}{return} resultado;
+87 \}
 \end{DoxyCode}
 
 
@@ -145,24 +444,18 @@ Definición en la línea 19 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 \end{DoxyReturn}
 
 
-Definición en la línea 180 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+Definición en la línea 161 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 
 
 \begin{DoxyCode}
-180                                                            \{
-181     \textcolor{comment}{/*os << "#Letra\(\backslash\)t Cant\(\backslash\)t Puntuacion" << endl;}
-182 \textcolor{comment}{    for (int i = 0; i < b.bolsa.size(); i++)}
-183 \textcolor{comment}{        os << b.bolsa[i] << endl;}
-184 \textcolor{comment}{}
-185 \textcolor{comment}{    return os;*/}
-186 
-187     os << \textcolor{stringliteral}{"Las letras son "};
-188     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < b.bolsa.size(); i++)
-189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < b.bolsa[i].getcantidad(); j++)
-190             os << b.bolsa[i].getletra() << \textcolor{stringliteral}{" "};
-191 
-192     \textcolor{keywordflow}{return} os;
-193 \}
+161                                                            \{
+162     os << \textcolor{stringliteral}{"Las letras son:   "};
+163     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < b.bolsa.size(); i++)
+164         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < b.bolsa[i].getcantidad(); j++)
+165             os << b.bolsa[i].getletra() << \textcolor{stringliteral}{" "};
+166 
+167     \textcolor{keywordflow}{return} os;
+168 \}
 \end{DoxyCode}
 \index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
@@ -188,20 +481,20 @@ Definición en la línea 180 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 \end{DoxyReturn}
 
 
-Definición en la línea 170 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+Definición en la línea 151 del archivo Bolsa\+\_\+\+Letras.\+cpp.
 
 
 \begin{DoxyCode}
-170                                                      \{
-171     \textcolor{keywordtype}{string} cabecera;
-172     getline(is, cabecera);
-173     \hyperlink{classLetra}{Letra} aux;
-174 
-175     \textcolor{keywordflow}{while}(is >> aux)
-176         b.\hyperlink{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{aniadir}(aux);
-177 
-178     \textcolor{keywordflow}{return} is;
-179 \}
+151                                                      \{
+152     \textcolor{keywordtype}{string} cabecera;
+153     getline(is, cabecera);
+154     \hyperlink{classLetra}{Letra} aux;
+155 
+156     \textcolor{keywordflow}{while}(is >> aux)
+157         b.\hyperlink{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{aniadir}(aux);
+158 
+159     \textcolor{keywordflow}{return} is;
+160 \}
 \end{DoxyCode}
 
 

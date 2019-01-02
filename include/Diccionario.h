@@ -33,9 +33,13 @@ public:
      * @return : True si la palabra esta en el diccionario y false en caso contrario.
      */
     bool Esta (string palabra);
-
+    /**
+     * @brief Genera los ficheros letras.txt y frecuencias.txt
+     * @param letras: Fichero letras.txt
+     * @param frecuencias: Fichero frecuencias.txt
+     * @return Devuelve true si se han generado correctamente y flase de lo contrario
+     */
     bool GenerarFicheros(string letras, string frecuencias);
-
     /**
      * @brief : Lee de un flujo de entrada un diccionario.
      * @param : is : Flujo de entrada.
@@ -51,22 +55,22 @@ public:
      */
     friend ostream& operator<< (ostream & os, const Diccionario & D);
 
-
-    class iter{
+// #revisar ME FALTA LA DOCUMENTACION DE TODA LA CLASE iterator
+    class iterator{
     private:
         set<string>::iterator it;
     public:
-        iter();
+        iterator();
         string operator* ();
-        iter & operator++ ();
-        bool operator== (const iter &i);
-        bool operator!= (const iter &i);
+        iterator & operator++ ();
+        bool operator== (const iterator &i);
+        bool operator!= (const iterator &i);
         friend class Diccionario;
     };
 
-    iter begin() const;
+    iterator begin() const;
 
-    iter end() const;
+    iterator end() const;
 
 
 };

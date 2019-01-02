@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['letra',['Letra',['../classLetra.html',1,'Letra'],['../classLetra.html#a2e236c67e3630258c6d3d9f2a9e66709',1,'Letra::Letra()']]]
+  ['iterator',['iterator',['../classDiccionario_1_1iterator.html',1,'Diccionario']]]
 ];

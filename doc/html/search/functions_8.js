@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['setcantidad',['setcantidad',['../classLetra.html#a89680a16e9ab48e9ed0d6dee52cae82e',1,'Letra']]],
-  ['setletra',['setletra',['../classLetra.html#a60bee0a9f4fd060146a9bc6711d728c4',1,'Letra']]],
-  ['setpuntos',['setpuntos',['../classLetra.html#a472f24ed48a494a80fff9f34306fac13',1,'Letra']]],
-  ['size',['size',['../classDiccionario.html#abe2e0023732c4cef7f6960120e8cde39',1,'Diccionario']]]
+  ['palabramaslarga',['PalabraMasLarga',['../classBolsa__Letras.html#afdbea74730c798b860d76655f05082c8',1,'Bolsa_Letras']]],
+  ['palabramaspuntos',['PalabraMasPuntos',['../classBolsa__Letras.html#a81cff895a837816fa37aa573ec9a450d',1,'Bolsa_Letras']]],
+  ['palabraslongitud',['PalabrasLongitud',['../classDiccionario.html#a6ec8594ebcc112eea474ae1ff86629be',1,'Diccionario']]],
+  ['puedoformar',['PuedoFormar',['../classBolsa__Letras.html#a6a611cf986750285ec11da71275199e2',1,'Bolsa_Letras']]]
 ];
