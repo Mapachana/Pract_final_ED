@@ -2,7 +2,7 @@
 #include <vector>
 #include <Letra.h>
 #include <Diccionario.h>
-#include <Conjunto_Letras.h>
+// #include <Conjunto_Letras.h>
 #include <string>
 #include <Bolsa_Letras.h>
 #include <random>
@@ -72,21 +72,28 @@ Bolsa_Letras Bolsa_Letras::GenerarLetrasJugador(int num){
 bool Bolsa_Letras::PuedoFormar(string palabra){
     vector<char> letras;
     bool resultado = true;
+    int pos;
 
     for (int i = 0; i < bolsa.size(); i++)
         for (int j = 0; j < bolsa[i].getcantidad(); j++)
             letras.push_back(bolsa[i].getletra());
 
-    for (int i = 0; i < palabra.length() && resultado; i++)
-        if (find(letras.begin(), letras.end(), palabra[i]) != letras.end()){
+    for (int i = 0; i < palabra.length() && resultado; i++) {
+
+        pos = distance(letras.begin(), find(letras.begin(), letras.end(), palabra[i]) );
+
+        if (pos != letras.size()){
             //cout << letras[i] << endl;
-            letras.erase(letras.begin()+i);
+            letras.erase(letras.begin() + pos);
         }
             //letras[i] = '2';
         else{
             resultado = false;
             //cout << "ENTRO AQUI CON LA PALABRA " << palabra << endl;
         }
+
+    }
+
 
 
     /*for (int i = 0; i < palabra.length(); i++)
@@ -143,6 +150,20 @@ vector<string> Bolsa_Letras::PalabraMasPuntos (const Diccionario &D){
     }
 
     return resultado;
+}
+
+int Bolsa_Letras::CalcularPuntos (string palabra){
+    int puntos = 0;
+    Letra aux;
+    int pos;
+
+    for (int i = 0; i < palabra.length(); i++){
+        aux.setletra(palabra[i]);
+        pos = distance(bolsa.begin(), find(bolsa.begin(), bolsa.end(), aux));
+        puntos += bolsa[pos].getpuntos();
+    }
+
+    return puntos;
 }
 
 

@@ -1,0 +1,211 @@
+\hypertarget{classBolsa__Letras}{}\section{Referencia de la Clase Bolsa\+\_\+\+Letras}
+\label{classBolsa__Letras}\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBolsa__Letras_aac3edc3708e10d1decee5575a0cfd543}{Bolsa\+\_\+\+Letras} ()\hypertarget{classBolsa__Letras_aac3edc3708e10d1decee5575a0cfd543}{}\label{classBolsa__Letras_aac3edc3708e10d1decee5575a0cfd543}
+
+\begin{DoxyCompactList}\small\item\em \+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} vacía \end{DoxyCompactList}\item 
+void \hyperlink{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{aniadir} (const \hyperlink{classLetra}{Letra} \&l)
+\begin{DoxyCompactList}\small\item\em \+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} a partir de un Conjunto\+\_\+\+Letras \end{DoxyCompactList}\item 
+\hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \& \hyperlink{classBolsa__Letras_a2c283861ab50b212023715c3959ec053}{operator=} (const \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \&b)
+\begin{DoxyCompactList}\small\item\em \+: Operador de asignacion. \end{DoxyCompactList}\item 
+void {\bfseries aniadirficha} (\hyperlink{classLetra}{Letra} l)\hypertarget{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}{}\label{classBolsa__Letras_ab058f1081bea740d77c9f9398ebd61e7}
+
+\item 
+\hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} {\bfseries Generar\+Letras\+Jugador} (int num)\hypertarget{classBolsa__Letras_a9f1e76257206146e695227576abed336}{}\label{classBolsa__Letras_a9f1e76257206146e695227576abed336}
+
+\item 
+bool {\bfseries Puedo\+Formar} (string palabra)\hypertarget{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}{}\label{classBolsa__Letras_a6a611cf986750285ec11da71275199e2}
+
+\item 
+vector$<$ string $>$ {\bfseries Palabra\+Mas\+Larga} (const \hyperlink{classDiccionario}{Diccionario} \&D)\hypertarget{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}{}\label{classBolsa__Letras_afdbea74730c798b860d76655f05082c8}
+
+\item 
+vector$<$ string $>$ {\bfseries Palabra\+Mas\+Puntos} (const \hyperlink{classDiccionario}{Diccionario} \&D)\hypertarget{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}{}\label{classBolsa__Letras_a81cff895a837816fa37aa573ec9a450d}
+
+\item 
+int {\bfseries Calcular\+Puntos} (string palabra)\hypertarget{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}{}\label{classBolsa__Letras_a1c3834faeccf9a8906d5b3b120f93106}
+
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \hyperlink{classBolsa__Letras_a411e49a5cfaff550ca5f6977ff18efba}{operator$>$$>$} (istream \&is, \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \&b)
+\begin{DoxyCompactList}\small\item\em \+: Lee de un flujo de entrada una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras}. \end{DoxyCompactList}\item 
+ostream \& \hyperlink{classBolsa__Letras_a4467ebafe1a0f889e3fda938465ed12c}{operator$<$$<$} (ostream \&os, const \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} \&c)
+\begin{DoxyCompactList}\small\item\em \+: Escribe en un flujo de salida una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descripción detallada}
+
+
+Definición en la línea 12 del archivo Bolsa\+\_\+\+Letras.\+h.
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!aniadir@{aniadir}}
+\index{aniadir@{aniadir}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{aniadir(const Letra \&l)}{aniadir(const Letra &l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bolsa\+\_\+\+Letras\+::aniadir (
+\begin{DoxyParamCaption}
+\item[{const {\bf Letra} \&}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{}\label{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}
+
+
+\+: Construye una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} a partir de un Conjunto\+\_\+\+Letras 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & c \+: Conjunto\+\_\+\+Letras a partir del que se obtienen las cantidades y letras \+: Añade una \hyperlink{classLetra}{Letra} al Conjunto\+\_\+\+Letras. \\
+\hline
+{\em } & l \+: \hyperlink{classLetra}{Letra} que se quiere añadir. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 23 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+23                                          \{
+24     \textcolor{keywordtype}{bool} existe = \textcolor{keyword}{false};
+25     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < bolsa.size(); i++)
+26         \textcolor{keywordflow}{if} (bolsa[i] == l)
+27             existe = \textcolor{keyword}{true};
+28     \textcolor{keywordflow}{if} (!existe)
+29         bolsa.push\_back(l);
+30 \}
+\end{DoxyCode}
+
+
+Gráfico de llamadas para esta función\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!operator=@{operator=}}
+\index{operator=@{operator=}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{operator=(const Bolsa\+\_\+\+Letras \&b)}{operator=(const Bolsa_Letras &b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bolsa\+\_\+\+Letras} \& Bolsa\+\_\+\+Letras\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Bolsa\+\_\+\+Letras} \&}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{classBolsa__Letras_a2c283861ab50b212023715c3959ec053}{}\label{classBolsa__Letras_a2c283861ab50b212023715c3959ec053}
+
+
+\+: Operador de asignacion. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & b \+: \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} que se quiere asignar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Devuelve una referencia al objeto. 
+\end{DoxyReturn}
+
+
+Definición en la línea 19 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+19                                                            \{
+20     bolsa = b.bolsa;
+21 \}
+\end{DoxyCode}
+
+
+\subsection{Documentación de las funciones relacionadas y clases amigas}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf Bolsa\+\_\+\+Letras} \&}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classBolsa__Letras_a4467ebafe1a0f889e3fda938465ed12c}{}\label{classBolsa__Letras_a4467ebafe1a0f889e3fda938465ed12c}
+
+
+\+: Escribe en un flujo de salida una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & os \+: Flujo de salida. \\
+\hline
+{\em } & b \+: El objeto \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras} que se escribe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Flujo de salida. 
+\end{DoxyReturn}
+
+
+Definición en la línea 180 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+180                                                            \{
+181     \textcolor{comment}{/*os << "#Letra\(\backslash\)t Cant\(\backslash\)t Puntuacion" << endl;}
+182 \textcolor{comment}{    for (int i = 0; i < b.bolsa.size(); i++)}
+183 \textcolor{comment}{        os << b.bolsa[i] << endl;}
+184 \textcolor{comment}{}
+185 \textcolor{comment}{    return os;*/}
+186 
+187     os << \textcolor{stringliteral}{"Las letras son "};
+188     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < b.bolsa.size(); i++)
+189         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < b.bolsa[i].getcantidad(); j++)
+190             os << b.bolsa[i].getletra() << \textcolor{stringliteral}{" "};
+191 
+192     \textcolor{keywordflow}{return} os;
+193 \}
+\end{DoxyCode}
+\index{Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Bolsa\+\_\+\+Letras@{Bolsa\+\_\+\+Letras}}
+\subsubsection[{\texorpdfstring{operator$>$$>$}{operator>>}}]{\setlength{\rightskip}{0pt plus 5cm}istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{istream \&}]{is, }
+\item[{{\bf Bolsa\+\_\+\+Letras} \&}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classBolsa__Letras_a411e49a5cfaff550ca5f6977ff18efba}{}\label{classBolsa__Letras_a411e49a5cfaff550ca5f6977ff18efba}
+
+
+\+: Lee de un flujo de entrada una \hyperlink{classBolsa__Letras}{Bolsa\+\_\+\+Letras}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em } & is \+: Flujo de entrada. \\
+\hline
+{\em } & b \+: El objeto donde se realiza la lectura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\+: Flujo de entrada. 
+\end{DoxyReturn}
+
+
+Definición en la línea 170 del archivo Bolsa\+\_\+\+Letras.\+cpp.
+
+
+\begin{DoxyCode}
+170                                                      \{
+171     \textcolor{keywordtype}{string} cabecera;
+172     getline(is, cabecera);
+173     \hyperlink{classLetra}{Letra} aux;
+174 
+175     \textcolor{keywordflow}{while}(is >> aux)
+176         b.\hyperlink{classBolsa__Letras_aec590e0eddf7ab585a15cda9369de21c}{aniadir}(aux);
+177 
+178     \textcolor{keywordflow}{return} is;
+179 \}
+\end{DoxyCode}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/Bolsa\+\_\+\+Letras.\+h\item 
+src/Bolsa\+\_\+\+Letras.\+cpp\end{DoxyCompactItemize}

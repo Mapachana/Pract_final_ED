@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <Letra.h>
-#include <Conjunto_Letras.h>
+// #include <Conjunto_Letras.h>
 #include <string>
 #include <Diccionario.h>
 
@@ -21,7 +21,7 @@ public:
      * @brief : Construye una Bolsa_Letras a partir de un Conjunto_Letras
      * @param : c : Conjunto_Letras a partir del que se obtienen las cantidades y letras
      */
-    Bolsa_Letras(const Conjunto_Letras & c);
+    // Bolsa_Letras(const Conjunto_Letras & c);
     /**
      * @brief : Añade una Letra al Conjunto_Letras.
      * @param :  l : Letra que se quiere añadir.
@@ -43,6 +43,8 @@ public:
     vector<string> PalabraMasLarga (const Diccionario & D);
 
     vector<string> PalabraMasPuntos (const Diccionario &D);
+
+    int CalcularPuntos (string palabra);
 
     /**
      * @brief : Lee de un flujo de entrada una Bolsa_Letras.
