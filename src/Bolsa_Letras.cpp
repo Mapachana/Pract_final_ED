@@ -9,6 +9,7 @@
 
 using namespace std;
 
+
 Bolsa_Letras::Bolsa_Letras(){}
 
 Bolsa_Letras& Bolsa_Letras::operator=(const Bolsa_Letras & b){
@@ -41,6 +42,7 @@ void Bolsa_Letras::aniadirficha(Letra l){
 }
 
 Bolsa_Letras Bolsa_Letras::GenerarLetrasJugador(int num){
+    Bolsa_Letras copia = *this;
     Bolsa_Letras jugador;
     int numfichas = 100;
 
@@ -52,11 +54,11 @@ Bolsa_Letras Bolsa_Letras::GenerarLetrasJugador(int num){
         terminado = false;
         int randnum = rand() % (numfichas-j) + 1;
 
-        for (int i = 0; i < bolsa.size() && !terminado; i++){
-            contador += bolsa[i].getcantidad();
+        for (int i = 0; i < copia.bolsa.size() && !terminado; i++){
+            contador += copia.bolsa[i].getcantidad();
             if (randnum <= contador){
-                jugador.aniadirficha(bolsa[i]);
-                bolsa[i].setcantidad(bolsa[i].getcantidad()-1);
+                jugador.aniadirficha(copia.bolsa[i]);
+                copia.bolsa[i].setcantidad(copia.bolsa[i].getcantidad()-1);
                 terminado = true;
             }
         }
@@ -70,17 +72,21 @@ bool Bolsa_Letras::PuedoFormar(string palabra){
     bool resultado = true;
     int pos;
 
-    for (int i = 0; i < bolsa.size(); i++)
-        for (int j = 0; j < bolsa[i].getcantidad(); j++)
-            letras.push_back(bolsa[i].getletra());
+    if (bolsa.size() < palabra.size())
+        resultado = false;
+    else{
+        for (int i = 0; i < bolsa.size(); i++)
+            for (int j = 0; j < bolsa[i].getcantidad(); j++)
+                letras.push_back(bolsa[i].getletra());
 
-    for (int i = 0; i < palabra.length() && resultado; i++) {
-        pos = distance(letras.begin(), find(letras.begin(), letras.end(), palabra[i]) );
+        for (int i = 0; i < palabra.length() && resultado; i++) {
+            pos = distance(letras.begin(), find(letras.begin(), letras.end(), palabra[i]) );
 
-        if (pos != letras.size())
-            letras.erase(letras.begin() + pos);
-        else
-            resultado = false;
+            if (pos != letras.size())
+                letras.erase(letras.begin() + pos);
+            else
+                resultado = false;
+        }
     }
 
     return resultado;
@@ -91,7 +97,7 @@ vector<string> Bolsa_Letras::PalabraMasLarga (const Diccionario & D){
     int maxlong = 0;
 
     for (auto palabra:D){
-            if (palabra.size() <= bolsa.size() && PuedoFormar(palabra))
+            if (PuedoFormar(palabra))
                 if (palabra.size() > maxlong){
                     maxlong = palabra.size();
                     resultado.clear();
@@ -102,30 +108,23 @@ vector<string> Bolsa_Letras::PalabraMasLarga (const Diccionario & D){
     }
 
     return resultado;
-
 }
 
 vector<string> Bolsa_Letras::PalabraMasPuntos (const Diccionario &D){
     vector<string> resultado;
     int maxpuntos = 0;
-    int maxlong = bolsa.size();
-    int cont = 0;
+    int contpuntos = 0;
     Letra aux;
 
     for(auto palabra:D){
-        if (palabra.size() <= maxlong && PuedoFormar(palabra)){
-            cont = 0;
-            for (auto letra:palabra){
-                aux.setletra(letra);
-                int pos = distance(bolsa.begin(), find(bolsa.begin(), bolsa.end(), aux));
-                cont += bolsa[pos].getpuntos();
-            }
-            if (cont > maxpuntos){
-                maxpuntos = cont;
+        if (PuedoFormar(palabra)){
+            contpuntos = CalcularPuntos(palabra);
+            if (contpuntos > maxpuntos){
+                maxpuntos = contpuntos;
                 resultado.clear();
                 resultado.push_back(palabra);
             }
-            else if (cont == maxpuntos)
+            else if (contpuntos == maxpuntos)
                 resultado.push_back(palabra);
         }
     }

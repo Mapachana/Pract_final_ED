@@ -8,6 +8,8 @@
 #include <string>
 #include <Diccionario.h>
 
+using namespace std;
+
 class Bolsa_Letras{
 private:
     vector<Letra> bolsa;
@@ -77,7 +79,6 @@ public:
      */
     friend ostream & operator<< (ostream & os, const Bolsa_Letras & c);
 };
-
 
 
 #endif // __Bolsa_Letras_h__

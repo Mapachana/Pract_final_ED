@@ -1,6 +1,7 @@
 #ifndef __Diccionario_h__
 #define __Diccionario_h__
 
+
 #include <set>
 #include <vector>
 #include <string>
@@ -39,7 +40,7 @@ public:
      * @param frecuencias: Fichero frecuencias.txt
      * @return Devuelve true si se han generado correctamente y flase de lo contrario
      */
-    bool GenerarFicheros(string letras, string frecuencias);
+    bool GenerarFicheros (string letras, string frecuencias);
     /**
      * @brief : Lee de un flujo de entrada un diccionario.
      * @param : is : Flujo de entrada.
@@ -55,21 +56,49 @@ public:
      */
     friend ostream& operator<< (ostream & os, const Diccionario & D);
 
-// #revisar ME FALTA LA DOCUMENTACION DE TODA LA CLASE iterator
+
     class iterator{
     private:
         set<string>::iterator it;
     public:
+        /**
+         * @brief : Construye un diccionario vacío.
+         */
         iterator();
+        /**
+         * @brief : Devuelve a que esta apuntando el iterador.
+         * @return : Palabra a la que apunta el iterador.
+         */
         string operator* ();
+        /**
+         * @brief : Incrementa en una unidad el iterador.
+         * @return : Iterador siguiente.
+         */
         iterator & operator++ ();
+        /**
+         * @brief : Commpara si dos iteradores son iguales.
+         * @param i : Iterador con el que se compara.
+         * @return : Devuelve true si son iguales y false en caso contrario.
+         */
         bool operator== (const iterator &i);
+        /**
+         * @brief : Commpara si dos iteradores son distintos.
+         * @param i : Iterador con el que se compara.
+         * @return : Devuelve true si son diferentes y false si son iguales.
+         */
         bool operator!= (const iterator &i);
         friend class Diccionario;
     };
 
+    /**
+     * @brief : Apunta al comienzo del objeto.
+     * @return : Devuelve un iterador apuntando al principio del objeto.
+     */
     iterator begin() const;
-
+    /**
+     * @brief : Apunta al final del objeto.
+     * @return : Devuelve un iterador apuntando al final del objeto.
+     */
     iterator end() const;
 
 

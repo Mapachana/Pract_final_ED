@@ -1,8 +1,8 @@
 #ifndef __Letra_h__
 #define __Letra_h__
 
-#include <iostream>
 
+#include <iostream>
 
 using namespace std;
 
@@ -82,5 +82,6 @@ public:
      */
     friend ostream & operator<<(ostream & os, const Letra & l);
 };
+
 
 #endif // __Letra_h__

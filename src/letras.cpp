@@ -16,6 +16,11 @@ int main(int argc, char * argv[]){
         return 0;
     }
 
+    if (atoi(argv[3]) <= 0 || atoi(argv[3]) > 100){
+	cout << "Error, el numero de fichas debe estar entre 1 y 100" << endl;
+	return 0;
+    }
+
     srand(time(NULL));
     string seguirjugando = "S";
     ifstream diccionario;

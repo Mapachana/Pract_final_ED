@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 Letra::Letra(){}
 
 char Letra::getletra() const{
@@ -27,7 +28,7 @@ bool Letra::setletra(char l){
 }
 
 bool Letra::setcantidad(int c){
-    if (c > 0){
+    if (c >= 0){
         cantidad = c;
         return true;
     }
@@ -36,7 +37,7 @@ bool Letra::setcantidad(int c){
 }
 
 bool Letra::setpuntos(int p){
-    if (p > 0){
+    if (p >= 0){
         puntos = p;
         return true;
     }
@@ -76,4 +77,6 @@ istream & operator>>(istream & is, Letra & l){
 
 ostream & operator<<(ostream & os, const Letra & l){
     os << l.letra << "\t" << l.cantidad << "\t" << l.puntos;
+
+    return os;
 }

@@ -93,7 +93,6 @@ bool Diccionario::GenerarFicheros(string letras, string frecuencias){
             maximo = i;
     }
 
-    // #revisar
     //Quiero que haya el numero de piezas que quiero si o si y como mucho se añaden 2 o 3 piezas  que no cambia mucho la estadistica
     while (cont < numfichas){
         cantidad[maximo]++;
