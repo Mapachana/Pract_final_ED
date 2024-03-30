@@ -1,6 +1,6 @@
 # Scrabble
 
-> Por: Ana Buendía Ruiz-Azuaga
+> Por: Mapachana
 
 ## Restricciones
 
